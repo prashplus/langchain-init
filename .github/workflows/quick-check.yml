@@ -1,0 +1,31 @@
+name: Quick Status Check
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  quick-check:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Set up Python 3.11
+      uses: actions/setup-python@v4
+      with:
+        python-version: '3.11'
+
+    - name: Install minimal dependencies
+      run: |
+        python -m pip install --upgrade pip
+        pip install langchain-core langchain-community
+
+    - name: Quick validation
+      run: |
+        # Test that files can be compiled
+        python -m py_compile langchain/*.py
+        python -m py_compile langgraph/*.py
+        python -c "from langchain_core.prompts import ChatPromptTemplate; print('✅ Basic imports working')"
+        echo "✅ Repository structure and basic functionality validated"

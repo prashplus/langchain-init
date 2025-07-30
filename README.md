@@ -1,5 +1,8 @@
 # LangChain & LangGraph Examples
 
+![CI Tests](https://github.com/prashplus/langchain-init/workflows/CI%20Tests/badge.svg)
+![Quick Status Check](https://github.com/prashplus/langchain-init/workflows/Quick%20Status%20Check/badge.svg)
+
 This repository contains sample projects and examples for working with LangChain and LangGraph frameworks.
 
 ## Projects
@@ -98,9 +101,32 @@ ollama pull llama3.2:latest
 python simple_agent.py
 ```
 
+## Testing
+
+This repository includes comprehensive testing and CI/CD:
+
+### Local Testing
+```bash
+# Test dependencies and basic functionality
+python test_dependencies.py
+
+# Run CI-style tests (syntax, imports, structure)
+python ci_test.py
+
+# Validate all example files
+python validate_examples.py
+```
+
+### Automated Testing
+- **CI Tests**: Automated testing on every push/PR across Python 3.9, 3.10, 3.11
+- **Quick Status Check**: Fast validation for basic functionality
+- **Health Check**: Weekly dependency and compatibility monitoring
+
+See [CONTRIBUTING.md](CONTRIBUTING.md) for detailed development guidelines.
+
 ## Contributing
 
-Feel free to contribute more examples, improvements, or new project templates!
+Feel free to contribute more examples, improvements, or new project templates! Please see [CONTRIBUTING.md](CONTRIBUTING.md) for guidelines.
 
 ## Authors
 
