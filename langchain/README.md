@@ -34,11 +34,34 @@ You should see `llama3.2:latest` in the list of available models.
 pip install -r requirements.txt
 ```
 
+**Note:** If you encounter dependency conflicts, try creating a virtual environment first:
+
+```bash
+# Create virtual environment
+python -m venv langchain_env
+
+# Activate virtual environment
+# On Windows:
+langchain_env\Scripts\activate
+# On Mac/Linux:
+source langchain_env/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 5. Test the Setup
+
+```bash
+python test_setup.py
+```
+
 ## Project Structure
 
 ```
 langchain/
-├── requirements.txt          # Python dependencies
+├── requirements.txt          # Python dependencies (compatible versions)
+├── test_setup.py            # Test script to verify setup
 ├── simple_chat.py           # Basic chat example
 ├── document_qa.py           # Document Q&A example
 ├── conversation_memory.py   # Conversation with memory
@@ -115,6 +138,15 @@ The examples use the following default configuration:
 
 4. **Import errors**: Make sure all dependencies are installed
    ```bash
+   pip install -r requirements.txt
+   # Or test with:
+   python test_setup.py
+   ```
+
+5. **Dependency conflicts**: Use a virtual environment
+   ```bash
+   python -m venv langchain_env
+   langchain_env\Scripts\activate  # Windows
    pip install -r requirements.txt
    ```
 

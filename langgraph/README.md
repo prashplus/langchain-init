@@ -36,11 +36,34 @@ ollama list
 pip install -r requirements.txt
 ```
 
+**Note:** If you encounter dependency conflicts, try creating a virtual environment first:
+
+```bash
+# Create virtual environment
+python -m venv langgraph_env
+
+# Activate virtual environment
+# On Windows:
+langgraph_env\Scripts\activate
+# On Mac/Linux:
+source langgraph_env/bin/activate
+
+# Install dependencies
+pip install -r requirements.txt
+```
+
+### 3. Test the Setup
+
+```bash
+python test_setup.py
+```
+
 ## Project Structure
 
 ```
 langgraph/
-├── requirements.txt              # Python dependencies
+├── requirements.txt              # Python dependencies (compatible versions)
+├── test_setup.py                 # Test script to verify setup
 ├── simple_agent.py              # Basic agent workflow
 ├── multi_step_reasoning.py      # Multi-step problem solving
 ├── conditional_workflow.py      # Conditional branching
@@ -165,6 +188,16 @@ The examples use the following default configuration:
 
 3. **Graph execution errors**: Check node implementations and state schema
 4. **Memory issues**: Adjust chunk sizes and state management
+5. **Dependency conflicts**: Use a virtual environment
+   ```bash
+   python -m venv langgraph_env
+   langgraph_env\Scripts\activate  # Windows
+   pip install -r requirements.txt
+   ```
+6. **Import errors**: Test your setup
+   ```bash
+   python test_setup.py
+   ```
 
 ## Advanced Usage
 

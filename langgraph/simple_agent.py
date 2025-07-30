@@ -8,7 +8,6 @@ that can handle different types of queries and route them appropriately.
 from typing import TypedDict, List
 from langchain_community.llms import Ollama
 from langgraph.graph import StateGraph, END
-from langgraph.prebuilt import ToolExecutor
 import json
 
 # Define the state schema

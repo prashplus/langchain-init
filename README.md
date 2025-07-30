@@ -54,8 +54,15 @@ A comprehensive collection of LangGraph examples demonstrating advanced AI workf
 ## Prerequisites
 
 - Python 3.8+
-- Ollama (for LangChain examples)
+- Ollama (for both LangChain and LangGraph examples)
 - Git
+
+**Recommended:** Use a virtual environment to avoid dependency conflicts:
+```bash
+python -m venv ai_examples_env
+# Windows: ai_examples_env\Scripts\activate
+# Mac/Linux: source ai_examples_env/bin/activate
+```
 
 ## Quick Start
 

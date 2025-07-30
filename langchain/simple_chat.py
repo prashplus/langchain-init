@@ -6,8 +6,8 @@ using the llama3.2:latest model for simple question-answering.
 """
 
 from langchain_community.llms import Ollama
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema import StrOutputParser
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
 
 def main():
     # Initialize Ollama with llama3.2:latest model

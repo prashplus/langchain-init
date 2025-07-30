@@ -8,7 +8,7 @@ across multiple interactions using LangChain's memory capabilities.
 from langchain_community.llms import Ollama
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationChain
-from langchain.prompts import PromptTemplate
+from langchain_core.prompts import PromptTemplate
 
 def main():
     # Initialize Ollama

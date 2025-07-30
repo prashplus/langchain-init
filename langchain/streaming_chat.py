@@ -6,9 +6,9 @@ in real-time for a more interactive chat experience.
 """
 
 from langchain_community.llms import Ollama
-from langchain.prompts import ChatPromptTemplate
-from langchain.schema import StrOutputParser
-from langchain.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
+from langchain_core.prompts import ChatPromptTemplate
+from langchain_core.output_parsers import StrOutputParser
+from langchain_core.callbacks.streaming_stdout import StreamingStdOutCallbackHandler
 import sys
 
 def main():
